@@ -1,15 +1,41 @@
+html {
+    font-size:62.5%;
+} 
+
 body {
     background-color: #fff;
     font-family: "Montserrat", sans-serif;
     color: black;
     text-align: center;
+    font-size: 1.6rem;
+    
 }
 
+ul {
+    list-style-type: none;
+}
+
+.container-div {
+    background-color: aqua;
+    width: 75%;
+    margin: auto; 
+    border: 15px solid green;
+    padding: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    
+}
 /* Heading */
 
 /* Game Layout */
-
+.main-game-area {
+    
+}
 /* Shapes Layout */
+
+.shapes-area {
 
 /* Buttons */
 

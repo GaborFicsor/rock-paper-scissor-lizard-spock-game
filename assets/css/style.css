@@ -25,7 +25,7 @@ ul {
     padding: 50px;
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     
 }
@@ -37,13 +37,25 @@ ul {
 }
 
 .shape-chosen {
-    width: 25px;
-    height: 25px;
-    background: black;
 }
 /* Shapes Layout */
 
 .shapes-area {
+}
+.shapes--button i {
+    font-size: 5rem;
+    color: black;
+}
+
+.shapes--button {
+    padding-top: 10px;
+    border-radius: 25%;
+    background-color: white;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+   
+}
 
 /* Buttons */
 

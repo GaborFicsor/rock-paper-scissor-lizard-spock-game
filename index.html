@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/6e2061ab0f.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
 
     <title>Document</title>
 </head>
+
 <body>
-    <h1>
-        Rock, Paper, Scissor, Lizard, Spock
-    </h1>
+    <header>
+        <h1>
+            Rock, Paper, Scissor, Lizard, Spock
+        </h1>
+    </header>
 
     <div class="main-game-area container-div">
         <div class="sub-game-area">
@@ -27,23 +32,36 @@
                 <img class="shape" src="" alt="">
             </div>
         </div>
+    </div>
+    <div class="message">
+        <p>Paper covers rock. You win!</p>
+    </div>
 
+    
+    <div class="score-board">
+        <div id="user-label" class="badge">
+            user
+        </div>
+        <div id="computer-label" class="badge">
+            comp
+        </div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
     </div>
     <div class="shapes-area container-div">
         <button class="shapes--button">
-            <i class="fa-solid fa-hand-back-fist"></i>
+            <i id="rock" class="fa-solid fa-hand-back-fist"></i>
         </button>
         <button class="shapes--button">
-            <i class="fa-solid fa-hand"></i>
+            <i id="paper" class="fa-solid fa-hand"></i>
         </button>
         <button class="shapes--button">
-            <i class="fa-solid fa-hand-scissors"></i>
+            <i id="scissors" class="fa-solid fa-hand-scissors"></i>
         </button>
         <button class="shapes--button">
-            <i class="fa-solid fa-hand-lizard"></i>
+            <i id="lizard" class="fa-solid fa-hand-lizard"></i>
         </button>
         <button class="shapes--button">
-            <i class="fa-solid fa-hand-spock"></i>
+            <i id="spock" class="fa-solid fa-hand-spock"></i>
         </button>
     </div>
     <div class="container-div">
@@ -67,4 +85,5 @@
     </div>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

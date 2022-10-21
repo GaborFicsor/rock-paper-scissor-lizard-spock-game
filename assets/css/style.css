@@ -21,29 +21,57 @@ header {
     padding: 20px;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    gap: 30rem;
-}
+/* image showing area */
 
-.container-div {
-    background-color: aqua;
-    width: 75%;
+/* .main-game-area {
+    width: 50%;
+    height: 500px;
     margin: auto; 
-    border: 15px solid green;
-    padding: 50px;
-    margin-top: 20px;
+    border: 5px solid white;
     display: flex;
-    justify-content: space-evenly;
-
-    
+    justify-content: space-evenly;  
 }
 
-/* Game Layout */
+.main-game-area div {
+    color: black;
+    width: 30px;
+    height: 30px;
+} */
+
 .main-game-area {
-    
+    width: 50%;
+    height: 600px;
+    border: 5px solid white;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
 }
+
+.sub-game-area {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    border: 5px solid white; 
+}
+
+
+/* message showing area */
+
+.message {
+    position: absolute;
+    top: 450px;
+    border: 5px solid white;
+    width: 50%;
+    height: 75px;
+}
+
+.vs {
+    position: absolute;
+    top: 250px;
+}
+
+/*  scoreboard area */
 
 .score-board {
     margin: 20px auto;
@@ -72,13 +100,10 @@ ul {
     right: -30px;
 }
 
-.result {
-
-}
+/* shape area */
 
 .shape-chosen {
 }
-/* Shapes Layout */
 
 .shapes-area {
 }
@@ -97,6 +122,16 @@ ul {
    
 }
 
-/* Buttons */
+/* buttons-area */
 
 /* media queries */
+
+/* <div class="main-game-area">
+<div class="shape-chosen">
+    <img class="shape" src="" alt="">
+</div>
+
+<div class="shape-chosen">
+    <img class="shape" src="" alt="">
+</div>  
+</div> */

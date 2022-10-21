@@ -59,16 +59,31 @@ header {
 /* message showing area */
 
 .message {
+    padding-top: 15px;
     position: absolute;
     top: 450px;
     border: 5px solid white;
     width: 50%;
     height: 75px;
+    font-size: 3rem;
 }
 
 .vs {
     position: absolute;
-    top: 250px;
+    top: 200px;
+    font-size: 10rem;
+}
+
+.user-choice {
+    position: absolute;
+    top: 60px;
+    left: 250px;
+}
+
+.comp-choice {
+    position: absolute;
+    top: 60px;
+    right: 220px;
 }
 
 /*  scoreboard area */
@@ -91,13 +106,13 @@ header {
 
 #user-label {
     position: absolute;
-    top: 30px;
-    left: -25px;
+    top: 0px;
+    left: 0px;
 }
 #computer-label {
     position: absolute;
-    top: 30px;
-    right: -30px;
+    bottom: 0px;
+    right: 0px;
 }
 
 /* shape area */

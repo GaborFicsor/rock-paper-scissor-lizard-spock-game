@@ -136,6 +136,7 @@ header {
     transform: scale(1.1);
     color: #DAA520;
     transition: 200ms;
+    box-shadow: 10px 10px black;
 }
 
 /* buttons-area */
@@ -157,10 +158,11 @@ header {
     border: none;
 }
 
-button:hover {
+.button:hover {
     transform: scale(1.1);
     transition: 200ms;
     cursor: pointer;
+    box-shadow: 10px 10px #DAA520;
 }
 /* media queries */
 

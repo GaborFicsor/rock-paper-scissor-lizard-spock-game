@@ -3,7 +3,7 @@ html {
 } 
 
 body {
-    background: lightgrey;
+    background: #008080;
     font-family: "Montserrat", sans-serif;
     color: black;
     text-align: center;
@@ -19,78 +19,67 @@ body {
 
 header {
     padding: 20px;
+    color: white;
+    text-shadow: 5px 5px black;
 }
 
 /* image showing area */
 
-/* .main-game-area {
-    width: 50%;
-    height: 500px;
-    margin: auto; 
-    border: 5px solid white;
-    display: flex;
-    justify-content: space-evenly;  
-}
-
-.main-game-area div {
-    color: black;
-    width: 30px;
-    height: 30px;
-} */
-
 .main-game-area {
-    width: 50%;
-    height: 600px;
-    border: 5px solid white;
+    width: 66%;
+    height: 350px;
+    background-color: #C84630;
     margin: auto;
     display: flex;
     justify-content: space-around;
     position: relative;
+    border-radius: 25px;
+    box-shadow: 5px 5px black;
 }
 
 .sub-game-area {
-    margin-top: 100px;
-    width: 300px;
-    height: 300px;
-    border: 5px solid white; 
+    margin-top: 75px;
+    width: 200px;
+    height: 200px;
+    position: relative;
 }
 
 
 /* message showing area */
 
 .message {
-    padding-top: 15px;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 50px;
     position: absolute;
-    top: 450px;
-    border: 5px solid white;
-    width: 50%;
-    height: 75px;
-    font-size: 3rem;
+    top: 290px;
+    width: 300px;
+    height: 40px;
+    font-size: 1.5rem;
 }
 
 .vs {
     position: absolute;
-    top: 200px;
+    top: 100px;
     font-size: 10rem;
 }
 
 .user-choice {
     position: absolute;
-    top: 60px;
-    left: 250px;
+    top: -25px;
+    left: 75px;
 }
 
 .comp-choice {
     position: absolute;
-    top: 60px;
-    right: 220px;
+    top: -25px;
+    right: 50px;
 }
 
 /*  scoreboard area */
 
 .score-board {
-    margin: 20px auto;
-    border: 3px solid white;
+    margin: 0px auto;
     width: 200px;
     color: white;
     font-size: 46px;
@@ -99,19 +88,18 @@ header {
 }
 
 .badge {
-    background: red;
     font-size: 14px;
     padding: 2px 10px;
 }
 
 #user-label {
     position: absolute;
-    top: 0px;
+    top: 30px;
     left: 0px;
 }
 #computer-label {
     position: absolute;
-    bottom: 0px;
+    top: 30px;
     right: 0px;
 }
 
@@ -121,32 +109,55 @@ header {
 }
 
 .shapes-area {
-}
-.shapes--button i {
-    font-size: 5rem;
-    color: black;
+    width: 600px;
+    margin: 0 auto;
+    display:flex;
+    padding-top: 20px;
+    justify-content: space-around;
 }
 
 .shapes--button {
     padding-top: 10px;
-    border-radius: 25%;
-    background-color: white;
-    border: 10px solid;
-    width: 100px;
-    height: 100px;
-   
+    background-color: none;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    box-shadow: 5px 5px black;
+    font-size: 5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.shapes--button:hover {
+    transform: scale(1.1);
+    color: #DAA520;
+    transition: 200ms;
 }
 
 /* buttons-area */
 
+.buttons-area {
+    width: 33%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    box-shadow: 5px 5px #DAA520;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    border: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+    cursor: pointer;
+}
 /* media queries */
 
-/* <div class="main-game-area">
-<div class="shape-chosen">
-    <img class="shape" src="" alt="">
-</div>
-
-<div class="shape-chosen">
-    <img class="shape" src="" alt="">
-</div>  
-</div> */

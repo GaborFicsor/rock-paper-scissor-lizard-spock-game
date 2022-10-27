@@ -3,7 +3,7 @@ let computerScore = 0;
 const userScoreSpan = document.getElementById("user-score");
 const computerScoreSpan = document.getElementById("computer-score");
 const scoreBoardDiv = document.querySelector(".score-board");
-const resultDiv = document.querySelector(".message");
+const message = document.querySelector(".message > p");
 
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
@@ -16,6 +16,26 @@ function getComputerChoice() {
     const choices = ["rock","paper","scissors","lizard","spock"];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
+}
+
+function win(userChoice, computerChoice) {
+    userScore++;
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
+    message.innerHTML = userChoice + " beats " + computerChoice + ". You win!";
+}
+
+function lose(userChoice, computerChoice) {
+    computerScore++;
+    userScoreSpan.innerHTML = userScore;
+    computerScore.innerHTML = computerScore;
+    message.innerHTML = userChoice + " loses to " + computerChoice + ". Computer wins!"
+}
+
+function tie(userChoice, computerChoice) {
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
+    message.innerHTML = userChoice + " ties with " + computerChoice + ". It's a draw!"
 }
 
 function game(userChoice) {
@@ -31,7 +51,7 @@ function game(userChoice) {
         case "lizardpaper":
         case "spockscissors":
         case "spockrock":
-            console.log("USER WINS");
+            win(userChoice, computerChoice)
             break;
         
         case "rockspock":
@@ -44,7 +64,7 @@ function game(userChoice) {
         case "lizardrock":
         case "spocklizard":
         case "spockpaper":
-            console.log("USER LOSES");
+            lose(userChoice, computerChoice)
             break;
         
         case "rockrock":
@@ -52,13 +72,11 @@ function game(userChoice) {
         case "scissorsscissors":
         case "spockspock":
         case "lizardlizard":
-            console.log("ITS A TIE");
+            tie(userChoice, computerChoice)
             break;
         
     }
 }
-
-
 
 
 function mainGame() {

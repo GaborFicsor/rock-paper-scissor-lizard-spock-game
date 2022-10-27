@@ -11,35 +11,40 @@ const scissors = document.getElementById("scissors");
 const lizard = document.getElementById("lizard");
 const spock = document.getElementById("spock");
 
+const userIcon = document.getElementById("user-icon");
+const computerIcon = document.getElementById("computer-icon");
+
 
 function getComputerChoice() {
     const choices = ["rock","paper","scissors","lizard","spock"];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
+    
 }
 
 function win(userChoice, computerChoice) {
     userScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    message.innerHTML = userChoice + " beats " + computerChoice + ". You win!";
+    message.innerHTML = userChoice + " beats " + computerChoice + ". You win!"
 }
 
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
-    computerScore.innerHTML = computerScore;
+    computerScoreSpan.innerHTML = computerScore;
     message.innerHTML = userChoice + " loses to " + computerChoice + ". Computer wins!"
+
 }
 
 function tie(userChoice, computerChoice) {
-    userScoreSpan.innerHTML = userScore;
-    computerScoreSpan.innerHTML = computerScore;
     message.innerHTML = userChoice + " ties with " + computerChoice + ". It's a draw!"
+
 }
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
+    console.log(computerChoice);
     switch (userChoice + computerChoice) {
         case "rockscissors":
         case "rocklizard":
@@ -80,23 +85,29 @@ function game(userChoice) {
 
 
 function mainGame() {
-    rock.addEventListener("click", function(){ 
+    rock.addEventListener("click", function(){
+        userIcon.innerHTML = "rock"
+        computerIcon.innerHTML = 
         game("rock");
     })
 
-    paper.addEventListener("click", function(){ 
+    paper.addEventListener("click", function(){
+        userIcon.innerHTML = "paper"
         game("paper");
     })
 
     scissors.addEventListener("click", function(){ 
+        userIcon.innerHTML = "scissors"
         game("scissors");
     })
 
     lizard.addEventListener("click", function(){ 
+        userIcon.innerHTML = "lizard"
         game("lizard");
     })
 
-    spock.addEventListener("click", function(){ 
+    spock.addEventListener("click", function(){
+        userIcon.innerHTML = "spock"
         game("spock");
     })
 

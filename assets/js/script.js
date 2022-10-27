@@ -33,18 +33,19 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    message.innerHTML = userChoice + " loses to " + computerChoice + ". Computer wins!"
+    message.innerHTML = userChoice + " loses to " + computerChoice + ". You lost!"
 
 }
 
 function tie(userChoice, computerChoice) {
-    message.innerHTML = userChoice + " ties with " + computerChoice + ". It's a draw!"
+    message.innerHTML = userChoice + " ties with " + computerChoice + ".";
 
 }
 
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-    console.log(computerChoice);
+    computerIcon.innerHTML = computerChoice;
     switch (userChoice + computerChoice) {
         case "rockscissors":
         case "rocklizard":
@@ -79,15 +80,14 @@ function game(userChoice) {
         case "lizardlizard":
             tie(userChoice, computerChoice)
             break;
-        
     }
 }
 
 
+
 function mainGame() {
     rock.addEventListener("click", function(){
-        userIcon.innerHTML = "rock"
-        computerIcon.innerHTML = 
+        userIcon.addClass = "roca-solid fa-hand-back-fistk";
         game("rock");
     })
 

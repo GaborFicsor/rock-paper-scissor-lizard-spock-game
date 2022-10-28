@@ -14,13 +14,17 @@ const spock = document.getElementById("spock");
 const userIcon = document.getElementById("user-icon");
 const computerIcon = document.getElementById("computer-icon");
 
+const newGameButton = document.getElementById("new-game");
+
 
 function getComputerChoice() {
-    const choices = ["rock","paper","scissors","lizard","spock"];
+    const choices = ["rock", "paper", "scissors", "lizard", "spock"];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
-    
+
 }
+
+
 
 function win(userChoice, computerChoice) {
     userScore++;
@@ -44,8 +48,22 @@ function tie(userChoice, computerChoice) {
 
 
 function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    computerIcon.innerHTML = computerChoice;
+    let computerChoice = getComputerChoice();
+  
+    if (computerChoice === "rock") {
+        computerIcon.innerHTML = `<i class="fa-solid fa-hand-back-fist icon-shown"></i>`;
+    } else if (computerChoice === "paper") {
+        computerIcon.innerHTML = `<i class="fa-solid fa-hand icon-shown"></i>`;
+    } else if (computerChoice === "scissors") {
+        computerIcon.innerHTML = `<i class="fa-solid fa-hand-scissors icon-shown"></i>`;
+    } else if (computerChoice === "lizard") {
+        computerIcon.innerHTML = `<i class="fa-solid fa-hand-lizard icon-shown"></i>`;
+    } else {
+        computerIcon.innerHTML = `<i class="fa-solid fa-hand-spock icon-shown"></i>`;
+    }
+
+
+
     switch (userChoice + computerChoice) {
         case "rockscissors":
         case "rocklizard":
@@ -59,7 +77,7 @@ function game(userChoice) {
         case "spockrock":
             win(userChoice, computerChoice)
             break;
-        
+
         case "rockspock":
         case "rockpaper":
         case "paperlizard":
@@ -72,7 +90,7 @@ function game(userChoice) {
         case "spockpaper":
             lose(userChoice, computerChoice)
             break;
-        
+
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
@@ -86,31 +104,48 @@ function game(userChoice) {
 
 
 function mainGame() {
-    rock.addEventListener("click", function(){
-        userIcon.addClass = "roca-solid fa-hand-back-fistk";
+    rock.addEventListener("click", function () {
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-back-fist icon-shown"></i>`
         game("rock");
     })
 
-    paper.addEventListener("click", function(){
-        userIcon.innerHTML = "paper"
+    paper.addEventListener("click", function () {
+        userIcon.innerHTML = `<i class="fa-solid fa-hand icon-shown"></i>`
         game("paper");
     })
 
-    scissors.addEventListener("click", function(){ 
-        userIcon.innerHTML = "scissors"
+    scissors.addEventListener("click", function () {
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-scissors icon-shown"></i>`
         game("scissors");
     })
 
-    lizard.addEventListener("click", function(){ 
-        userIcon.innerHTML = "lizard"
+    lizard.addEventListener("click", function () {
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-lizard icon-shown"></i>`
         game("lizard");
     })
 
-    spock.addEventListener("click", function(){
-        userIcon.innerHTML = "spock"
+    spock.addEventListener("click", function () {
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-spock icon-shown"></i>`
         game("spock");
     })
 
 }
+
+function newGame() {
+    newGameButton.addEventListener("click", function() {
+        userScore = 0;
+        computerScore = 0;
+        userScoreSpan.innerHTML = userScore;
+        computerScoreSpan.innerHTML = computerScore;
+        message.innerHTML = "Choose one from below";
+        userIcon.innerHTML = `<i class=""></i>`
+        computerIcon.innerHTML = `<i class=""></i>`
+       
+
+    })
+
+
+}
+
 
 mainGame();

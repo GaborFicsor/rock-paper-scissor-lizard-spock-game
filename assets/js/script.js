@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /**
  * For the game, maingame, win, tie, lose and getcComputerChoice functions 
  * I used (https://www.youtube.com/watch?v=jaVNP3nIAv0) this tutorial video
@@ -11,7 +13,6 @@
  * number.
 */
 
-/*jshint esversion: 6 */
 
 // variables for the Scores, Scoreboard and Message
 let userScore = 0;
@@ -252,3 +253,4 @@ function restartGame() {
 }
 
 mainGame();
+

@@ -1,3 +1,4 @@
+// variables for the Scores, Scoreboard and Message
 let userScore = 0;
 let computerScore = 0;
 const userScoreSpan = document.getElementById("user-score");
@@ -5,27 +6,30 @@ const computerScoreSpan = document.getElementById("computer-score");
 const scoreBoardDiv = document.querySelector(".score-board");
 const message = document.querySelector(".message > p");
 
+// variables for the shapes that can be choosen to play the game
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const lizard = document.getElementById("lizard");
 const spock = document.getElementById("spock");
 
+// variables for the icons that show up based on the user choice and the computer's random generated number
 const userIcon = document.getElementById("user-icon");
 const computerIcon = document.getElementById("computer-icon");
 
+// variables for the buttons that resets the game
 const newGameButton = document.getElementById("new-game");
 const restarGameButton = document.getElementById("restart-game");
 
+// variables for the instructions modal
 let modal = document.getElementById("open");
 let ins = document.getElementById("instructions");
 let close = document.getElementsByClassName("close")[0];
 
+// variable for the game over modal
 let gameOverMessage = document.getElementById("game-over-message");
 
-
-
-
+// functions for the instructions modal
 ins.onclick = function() {
     modal.style.display = "block";
 }
@@ -40,16 +44,23 @@ window.onclick = function(event) {
     }
 }
 
-
+/**
+ * the function for the computer to get a random generated number, which 
+ * returns a rounded number that corresponds to either one of the list of the
+ * choices that can make a computer's move
+ */
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors", "lizard", "spock"];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
-
 }
 
-
-
+/**
+ * this function triggers when the userChoice and the computerChoice is compared
+ * and the result is that the user wins. Then the user's score is incremented
+ * and a message shows up based on the game's rules. Additionally a short 
+ * glow effect triggers which reinforces the user's victory
+ */
 function win(userChoice, computerChoice) {
     userScore++;
     userScoreSpan.innerHTML = userScore;
@@ -61,6 +72,12 @@ function win(userChoice, computerChoice) {
     setTimeout(function() {computerIcon.classList.remove("red")}, 500);
 }
 
+/**
+ * this function triggers when the userChoice and the computerChoice is compared
+ * and the result is that the computer wins. Then the computer's score is incremented
+ * and a message shows up based on the game's rules. Additionally a short 
+ * glow effect triggers which reinforces the computer's victory
+ */
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
@@ -72,18 +89,27 @@ function lose(userChoice, computerChoice) {
     setTimeout(function() {computerIcon.classList.remove("green")}, 500);
 }
 
-
-
+/**
+ * this function triggers when the userChoice and the computerChoice is compared
+ * and the result is a draw. The scoreboard does not get updated on either side
+ * and a message shows up based on the game's rules. Additionally a short 
+ * glow effect triggers which reinforces the draw.
+ */
 function tie(userChoice, computerChoice) {
     message.innerHTML = userChoice + " ties with " + computerChoice + ".";
     userIcon.classList.add("grey");
     computerIcon.classList.add("grey");
     setTimeout(function() {userIcon.classList.remove("grey")}, 500);
     setTimeout(function() {computerIcon.classList.remove("grey")}, 500);
-
 }
 
-
+/**
+ * this function triggers based on the user's pick with an icon showing up
+ * on the screen. Then a switch statement compares the user's and the
+ * computer's choice and determines the outcome.
+ * If the user or the computer reaches 10 points the game ends with a modal
+ * showing up on the screen.
+ */
 function game(userChoice) {
     let computerChoice = getComputerChoice();
 
@@ -98,8 +124,6 @@ function game(userChoice) {
     } else {
         computerIcon.innerHTML = `<i class="fa-solid fa-hand-spock icon-shown"></i>`;
     }
-
-
 
     switch (userChoice + computerChoice) {
         case "rockscissors":
@@ -148,7 +172,10 @@ function game(userChoice) {
 }
 
 
-
+/**
+ * the main game function that waits for a click from the user and starts 
+ * the game function based on their choice.
+ */
 function mainGame() {
     rock.addEventListener("click", function () {
         userIcon.innerHTML = `<i class="fa-solid fa-hand-back-fist icon-shown"></i>`
@@ -177,8 +204,10 @@ function mainGame() {
 
 }
 
-
-
+/**
+ * function for a new game button that resets the scoreboard, the icons and 
+ * the message.
+ */
 function newGame() {
     newGameButton.addEventListener("click", function () {
         userScore = 0;
@@ -191,6 +220,10 @@ function newGame() {
     })
 }
 
+/**
+ * function for a new game button that shows up after the game is over and 
+ * resets the scoreboard, the icons and the message.
+ */
 function restartGame() {
     restarGameButton.addEventListener("click", function() {
         userScore = 0;

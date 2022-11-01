@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
 
-    <title>Document</title>
+    <title>Rock Paper Scissors Lizard Spock</title>
 </head>
 
 <body>
@@ -21,50 +21,58 @@
     </header>
 
 
-    <!-- image showing area / image showing area / image showing area / image showing area -->
+    <!-- icon showing area  -->
 
     <div class="main-game-area">
         <div class="sub-game-area">
             <i id="user-icon"></i>
-            <div class="user-choice">You</div>
+            <div class="user-choice">
+                You
+            </div>
         </div>
         <div class="sub-game-area">
             <i id="computer-icon"></i>
-            <div class="comp-choice">Computer</div>
+            <div class="comp-choice">
+                Computer
+            </div>
         </div>
 
         <div class="vs">
-            <p>vs</p>
+            <p>
+                vs
+            </p>
         </div>
         <div class="message">
-            <p>Make your move!</p>
+            <p>
+                Make your move!
+            </p>
         </div>
 
 
     </div>
 
 
-    <!-- shape-area / shape-area / shape-area / shape-area / shape-area / shape-area / shape-area -->
+    <!-- shape-area -->
 
     <div class="shapes-area">
-        <button class="shapes--button">
+        <button class="shapes-button">
             <i id="rock" class="fa-solid fa-hand-back-fist"></i>
         </button>
-        <button class="shapes--button">
+        <button class="shapes-button">
             <i id="paper" class="fa-solid fa-hand"></i>
         </button>
-        <button class="shapes--button">
+        <button class="shapes-button">
             <i id="scissors" class="fa-solid fa-hand-scissors"></i>
         </button>
-        <button class="shapes--button">
+        <button class="shapes-button">
             <i id="lizard" class="fa-solid fa-hand-lizard"></i>
         </button>
-        <button class="shapes--button">
+        <button class="shapes-button">
             <i id="spock" class="fa-solid fa-hand-spock"></i>
         </button>
     </div>
 
-    <!-- scoreboard area / scoreboard area / scoreboard area / scoreboard area / scoreboard area -->
+    <!-- scoreboard area -->
 
     <div class="score-board">
         <div id="user-label" class="badge">
@@ -76,7 +84,7 @@
         <span id="user-score">0</span>:<span id="computer-score">0</span>
     </div>
 
-    <!-- buttons-area / buttons-area / buttons-area / buttons-area / buttons-area / buttons-area-->
+    <!-- buttons-area -->
 
     <div class="buttons-area">
         <div>
@@ -89,38 +97,55 @@
                 instructions
             </button>
 
+        </div>
     </div>
+
+    <!-- instructions modal  -->
 
     <div id="open" class="modal">
         <div class="modal-content">
-        <!-- <span class="close button">close</span> -->
-        <p>First one to reach 10 points wins!</p>
-        <img src="assets/images/game_rules.webp" alt="rules of the game" id="rules">
-        <ul>
-            <li>rock beats scissors and lizard</li>
-            <li>paper beats rock and spock</li>
-            <li>scissors beats paper and lizard</li>
-            <li>lizard beats spock and paper</li>
-            <li>spock beats rock and scissors</li>
-        </ul>
-        <br>
-        <button class="close button">close</button>
+            <p>
+                First one to reach 10 points wins!
+            </p>
+            <img src="assets/images/game_rules.webp" alt="rules of the game" aria-label="rules of the game" id="rules">
+            <ul>
+                <li>
+                    rock beats scissors and lizard
+                </li>
+                <li>
+                    paper beats rock and spock
+                </li>
+                <li>
+                    scissors beats paper and lizard
+                </li>
+                <li>
+                    lizard beats spock and paper
+                </li>
+                <li>
+                    spock beats rock and scissors
+                </li>
+            </ul>
+            <br>
+            <button class="close button">close</button>
+        </div>
     </div>
-    </div>
+
+    <!-- game-over modal -->
 
     <div id="game-over" class="modal">
         <div class="modal-content">
-            <h1>Game over!</h1>
+            <h1>
+                Game over!
+            </h1>
             <p id="game-over-message"></p>
             <br>
             <button id="restart-game" onclick="restartGame()" class="button">Play again</button>
         </div>
     </div>
 
-    
+    <!-- script -->
 
-
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

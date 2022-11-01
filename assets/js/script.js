@@ -1,3 +1,18 @@
+/**
+ * For the game, maingame, win, tie, lose and getcComputerChoice functions 
+ * I used (https://www.youtube.com/watch?v=jaVNP3nIAv0) this tutorial video
+ * but it is important to mention that my rock paper scissors game is different from
+ * the one in the video, so I added value to really make it my own project, and worked really hard 
+ * by using the tutorial to enhance my knowledge.
+ * 
+ * For the modals that appear in the final project I used (https://www.w3schools.com/howto/howto_css_modals.asp)
+ * 
+ * Also one of the tutors helped me with the part where the icon shows up based on the computer's random generated
+ * number.
+*/
+
+
+
 // variables for the Scores, Scoreboard and Message
 let userScore = 0;
 let computerScore = 0;

@@ -93,7 +93,7 @@
 
     <div id="open" class="modal">
         <div class="modal-content">
-        <span class="close button">close</span>
+        <!-- <span class="close button">close</span> -->
         <p>First one to reach 10 points wins!</p>
         <img src="assets/images/game_rules.webp" alt="rules of the game" id="rules">
         <ul>
@@ -103,14 +103,16 @@
             <li>lizard beats spock and paper</li>
             <li>spock beats rock and scissors</li>
         </ul>
+        <br>
+        <button class="close button">close</button>
     </div>
     </div>
 
     <div id="game-over" class="modal">
-        <div id="game-over-content">
+        <div class="modal-content">
             <h1>Game over!</h1>
-            <br>
             <p id="game-over-message"></p>
+            <br>
             <button id="restart-game" onclick="restartGame()" class="button">Play again</button>
         </div>
     </div>

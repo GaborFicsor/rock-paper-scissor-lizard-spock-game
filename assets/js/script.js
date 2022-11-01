@@ -23,6 +23,9 @@ let close = document.getElementsByClassName("close")[0];
 
 let gameOverMessage = document.getElementById("game-over-message");
 
+
+
+
 ins.onclick = function() {
     modal.style.display = "block";
 }
@@ -51,20 +54,32 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    message.innerHTML = userChoice + " beats " + computerChoice + ". You win!"
+    message.innerHTML = userChoice + " beats " + computerChoice + ". You win!";
+    userIcon.classList.add("green");
+    computerIcon.classList.add("red");
+    setTimeout(function() {userIcon.classList.remove("green")}, 500);
+    setTimeout(function() {computerIcon.classList.remove("red")}, 500);
 }
 
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    message.innerHTML = userChoice + " loses to " + computerChoice + ". You lost!"
+    message.innerHTML = userChoice + " loses to " + computerChoice + ". You lost!";
+    userIcon.classList.add("red");
+    computerIcon.classList.add("green");
+    setTimeout(function() {userIcon.classList.remove("red")}, 500);
+    setTimeout(function() {computerIcon.classList.remove("green")}, 500);
 }
 
 
 
 function tie(userChoice, computerChoice) {
     message.innerHTML = userChoice + " ties with " + computerChoice + ".";
+    userIcon.classList.add("grey");
+    computerIcon.classList.add("grey");
+    setTimeout(function() {userIcon.classList.remove("grey")}, 500);
+    setTimeout(function() {computerIcon.classList.remove("grey")}, 500);
 
 }
 

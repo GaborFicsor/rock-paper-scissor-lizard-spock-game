@@ -50,16 +50,15 @@ header {
 
 .icon-shown {
     padding-top: 20px;
-    background-color: white;
+    background-color: #fff;
     border: none;
     width: 130px;
     height: 130px;
     border-radius: 50%;
     font-size:9rem;
-    color: black;
     cursor: pointer;
-
 }
+
 
 /* message showing area */
 
@@ -215,6 +214,17 @@ li {
     list-style-type: none;
   }
 
+.green {
+    color: #00FF00;
+}
+
+.red {
+    color: #FF0000;
+}
+
+.grey {
+    color: #808080;
+}
 
 
 /* media queries */
@@ -293,7 +303,6 @@ li {
         margin-top: 75px;
     }
 
-
     .user-choice {
         font-size: 1.6rem;
     }
@@ -338,9 +347,13 @@ li {
     }
 
     .modal-content {
+        margin: 5% auto;
         width: 400px;
     }
 
+    .vs {
+        visibility: visible;
+    }
 }
 
 @media (min-width: 1500px) {

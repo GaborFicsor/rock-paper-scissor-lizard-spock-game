@@ -11,12 +11,13 @@
  * number.
 */
 
+/*jshint esversion: 6 */
+
 // variables for the Scores, Scoreboard and Message
 let userScore = 0;
 let computerScore = 0;
 const userScoreSpan = document.getElementById("user-score");
 const computerScoreSpan = document.getElementById("computer-score");
-const scoreBoardDiv = document.querySelector(".score-board");
 const message = document.querySelector(".message > p");
 
 // variables for the shapes that can be choosen to play the game
@@ -37,7 +38,7 @@ const restarGameButton = document.getElementById("restart-game");
 // variables for the instructions modal
 let modal = document.getElementById("open");
 let ins = document.getElementById("instructions");
-let close = document.getElementsByClassName("close")[0];
+let closemodal = document.getElementsByClassName("close")[0];
 
 // variable for the game over modal
 let gameOverMessage = document.getElementById("game-over-message");
@@ -45,17 +46,17 @@ let gameOverMessage = document.getElementById("game-over-message");
 // functions for the instructions modal
 ins.onclick = function() {
     modal.style.display = "block";
-}
+};
 
-close.onclick = function() {
+closemodal.onclick = function() {
     modal.style.display = "none";
-}
+};
 
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};
 
 /**
  * the function for the computer to get a random generated number, which 
@@ -81,8 +82,8 @@ function win(userChoice, computerChoice) {
     message.innerHTML = userChoice + " beats " + computerChoice + ". You win!";
     userIcon.classList.add("green");
     computerIcon.classList.add("red");
-    setTimeout(function() {userIcon.classList.remove("green")}, 500);
-    setTimeout(function() {computerIcon.classList.remove("red")}, 500);
+    setTimeout(function() {userIcon.classList.remove("green");}, 500);
+    setTimeout(function() {computerIcon.classList.remove("red");}, 500);
 }
 
 /**
@@ -98,8 +99,8 @@ function lose(userChoice, computerChoice) {
     message.innerHTML = userChoice + " loses to " + computerChoice + ". You lost!";
     userIcon.classList.add("red");
     computerIcon.classList.add("green");
-    setTimeout(function() {userIcon.classList.remove("red")}, 500);
-    setTimeout(function() {computerIcon.classList.remove("green")}, 500);
+    setTimeout(function() {userIcon.classList.remove("red");}, 500);
+    setTimeout(function() {computerIcon.classList.remove("green");}, 500);
 }
 
 /**
@@ -112,8 +113,8 @@ function tie(userChoice, computerChoice) {
     message.innerHTML = userChoice + " ties with " + computerChoice + ".";
     userIcon.classList.add("grey");
     computerIcon.classList.add("grey");
-    setTimeout(function() {userIcon.classList.remove("grey")}, 500);
-    setTimeout(function() {computerIcon.classList.remove("grey")}, 500);
+    setTimeout(function() {userIcon.classList.remove("grey");}, 500);
+    setTimeout(function() {computerIcon.classList.remove("grey");}, 500);
 }
 
 /**
@@ -149,7 +150,7 @@ function game(userChoice) {
         case "lizardpaper":
         case "spockscissors":
         case "spockrock":
-            win(userChoice, computerChoice)
+            win(userChoice, computerChoice);
             break;
 
         case "rockspock":
@@ -162,7 +163,7 @@ function game(userChoice) {
         case "lizardrock":
         case "spocklizard":
         case "spockpaper":
-            lose(userChoice, computerChoice)
+            lose(userChoice, computerChoice);
             break;
 
         case "rockrock":
@@ -170,7 +171,7 @@ function game(userChoice) {
         case "scissorsscissors":
         case "spockspock":
         case "lizardlizard":
-            tie(userChoice, computerChoice)
+            tie(userChoice, computerChoice);
             break;
     }
 
@@ -190,35 +191,35 @@ function game(userChoice) {
  */
 function mainGame() {
     rock.addEventListener("click", function () {
-        userIcon.innerHTML = `<i class="fa-solid fa-hand-back-fist icon-shown"></i>`
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-back-fist icon-shown"></i>`;
         game("rock");
-    })
+    });
 
     paper.addEventListener("click", function () {
-        userIcon.innerHTML = `<i class="fa-solid fa-hand icon-shown"></i>`
+        userIcon.innerHTML = `<i class="fa-solid fa-hand icon-shown"></i>`;
         game("paper");
-    })
+    });
 
     scissors.addEventListener("click", function () {
-        userIcon.innerHTML = `<i class="fa-solid fa-hand-scissors icon-shown"></i>`
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-scissors icon-shown"></i>`;
         game("scissors");
-    })
+    });
 
     lizard.addEventListener("click", function () {
-        userIcon.innerHTML = `<i class="fa-solid fa-hand-lizard icon-shown"></i>`
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-lizard icon-shown"></i>`;
         game("lizard");
-    })
+    });
 
     spock.addEventListener("click", function () {
-        userIcon.innerHTML = `<i class="fa-solid fa-hand-spock icon-shown"></i>`
+        userIcon.innerHTML = `<i class="fa-solid fa-hand-spock icon-shown"></i>`;
         game("spock");
-    })
+    });
 
 }
 
 /**
  * function for a new game button that resets the scoreboard, the icons and 
- * the message.
+ * the message. Jshint marks this as a unusued variable but it is triggered after a click event.
  */
 function newGame() {
     newGameButton.addEventListener("click", function () {
@@ -229,12 +230,13 @@ function newGame() {
         message.innerHTML = "Make your move!";
         userIcon.innerHTML = `<i class=""></i>`;
         computerIcon.innerHTML = `<i class=""></i>`;
-    })
+    });
 }
 
 /**
  * function for a new game button that shows up after the game is over and 
  * resets the scoreboard, the icons and the message.
+ * Jshint marks this as a unusued variable but it is triggered after a click event.
  */
 function restartGame() {
     restarGameButton.addEventListener("click", function() {
@@ -246,7 +248,7 @@ function restartGame() {
         userIcon.innerHTML = `<i class=""></i>`;
         computerIcon.innerHTML = `<i class=""></i>`;
         document.getElementById("game-over").style.display = "none";
-    })
+    });
 }
 
 mainGame();

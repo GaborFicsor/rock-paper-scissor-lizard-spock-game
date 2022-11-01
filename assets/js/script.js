@@ -11,8 +11,6 @@
  * number.
 */
 
-
-
 // variables for the Scores, Scoreboard and Message
 let userScore = 0;
 let computerScore = 0;
@@ -179,13 +177,12 @@ function game(userChoice) {
 
     if (userScore === 10) {
         document.getElementById("game-over").style.display = "block";
-        gameOverMessage.innerHTML = "You win!"
+        gameOverMessage.innerHTML = "You win!";
     } else if (computerScore === 10) {
         document.getElementById("game-over").style.display = "block";
-        gameOverMessage.innerHTML = "Computer wins, better luck next time!"
+        gameOverMessage.innerHTML = "Computer wins, better luck next time!";
     }
 }
-
 
 /**
  * the main game function that waits for a click from the user and starts 
@@ -251,6 +248,5 @@ function restartGame() {
         document.getElementById("game-over").style.display = "none";
     })
 }
-
 
 mainGame();

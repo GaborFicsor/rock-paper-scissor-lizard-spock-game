@@ -15,6 +15,27 @@ const userIcon = document.getElementById("user-icon");
 const computerIcon = document.getElementById("computer-icon");
 
 const newGameButton = document.getElementById("new-game");
+const restarGameButton = document.getElementById("restart-game");
+
+let modal = document.getElementById("open");
+let ins = document.getElementById("instructions");
+let close = document.getElementsByClassName("close")[0];
+
+let gameOverMessage = document.getElementById("game-over-message");
+
+ins.onclick = function() {
+    modal.style.display = "block";
+}
+
+close.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 function getComputerChoice() {
@@ -38,8 +59,9 @@ function lose(userChoice, computerChoice) {
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
     message.innerHTML = userChoice + " loses to " + computerChoice + ". You lost!"
-
 }
+
+
 
 function tie(userChoice, computerChoice) {
     message.innerHTML = userChoice + " ties with " + computerChoice + ".";
@@ -49,7 +71,7 @@ function tie(userChoice, computerChoice) {
 
 function game(userChoice) {
     let computerChoice = getComputerChoice();
-  
+
     if (computerChoice === "rock") {
         computerIcon.innerHTML = `<i class="fa-solid fa-hand-back-fist icon-shown"></i>`;
     } else if (computerChoice === "paper") {
@@ -99,6 +121,15 @@ function game(userChoice) {
             tie(userChoice, computerChoice)
             break;
     }
+
+
+    if (userScore === 10) {
+        document.getElementById("game-over").style.display = "block";
+        gameOverMessage.innerHTML = "You win!"
+    } else if (computerScore === 10) {
+        document.getElementById("game-over").style.display = "block";
+        gameOverMessage.innerHTML = "Computer wins, better luck next time!"
+    }
 }
 
 
@@ -131,20 +162,31 @@ function mainGame() {
 
 }
 
+
+
 function newGame() {
-    newGameButton.addEventListener("click", function() {
+    newGameButton.addEventListener("click", function () {
         userScore = 0;
         computerScore = 0;
         userScoreSpan.innerHTML = userScore;
         computerScoreSpan.innerHTML = computerScore;
-        message.innerHTML = "Choose one from below";
-        userIcon.innerHTML = `<i class=""></i>`
-        computerIcon.innerHTML = `<i class=""></i>`
-       
-
+        message.innerHTML = "Make your move!";
+        userIcon.innerHTML = `<i class=""></i>`;
+        computerIcon.innerHTML = `<i class=""></i>`;
     })
+}
 
-
+function restartGame() {
+    restarGameButton.addEventListener("click", function() {
+        userScore = 0;
+        computerScore = 0;
+        userScoreSpan.innerHTML = userScore;
+        computerScoreSpan.innerHTML = computerScore;
+        message.innerHTML = "Make your move!";
+        userIcon.innerHTML = `<i class=""></i>`;
+        computerIcon.innerHTML = `<i class=""></i>`;
+        document.getElementById("game-over").style.display = "none";
+    })
 }
 
 

@@ -128,7 +128,7 @@ The live link can be found here: [Rock, Paper, Scissors, Lizard, Spock](https://
 # Media
 * icons were taken from [font awesome](https://fontawesome.com/)
 * instructions image was taken from [Google Images > BigBang Theory Fandom ](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
-
+* favicon was made with [Fonticon](https://gauger.io/fonticon/)
 # Purpose
 
 * this website was made for education purposes only

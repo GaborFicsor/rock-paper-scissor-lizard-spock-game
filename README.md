@@ -6,17 +6,17 @@ Technologies used to make this website are HTML5, CSS3 and JavaScript.
 
 The webpage is interactive and responsive
 
-![Screenshot of the Am i responsive testing of the page]()
+![Screenshot of the Am I responsive testing of the page](docs/responsive-design.png)
 
-## Features
+# Features
 
-### header
+## header
 
 ![Screenshot of the page header](docs/header-screenshot.png)
 
 The landing page features a header with the name of the game. This has no other purpose than to tell te user what game they are about to play.
 
-### Main game area
+## Main game area
 
 ![Screenshot of the main game area](docs/main-game-area.png)
 
@@ -33,9 +33,9 @@ The landing page features a header with the name of the game. This has no other 
 
 * The following screenshot is when the user and computer draws.
 
-![Screenshot of the main game area](docs/state-of-game-tie.png)
+![Screenshot of the main game area](docs/state-of-game-draw.png)
 
-### Shapes area
+## Shapes area
 
 ![Screenshot of the main game area](docs/shapes-area.png)
 
@@ -44,7 +44,7 @@ The landing page features a header with the name of the game. This has no other 
 * Hovering over the shapes makes them stand out from the other buttons, and attracts the user's attention, while reinforcing their choice. Clicking one of the buttons will make a slightly bigger version of their corresponding icons appear in the main game area mentioned above.
 * Whether the user loses, ties or wins, the color of the icons above changes accordingly.
 
-### Scoreboard
+## Scoreboard
 
 ![Screenshot of the main game area](docs/scoreboard.png)
 
@@ -57,15 +57,15 @@ When the winner is announced, a modal appears on-screen that tells the user weth
 
 * Here the user is offered to play again, where both the computer and the user start from 0 points, and the game over modal disappears.
 
-### Buttons
+## Buttons
 
 ![Screenshot of the main game area](docs/buttons.png)
 
-new game
+### new game
 
 * This button has the same functionality as the play again button, except this button is always visible, and it gives an option for the user to restart the game and reset the scores whenever they feel like it.
 
-instructions
+### instructions
 
 * This button makes a modal appear on the screen which tells the user the rules of the game.
 
@@ -73,7 +73,7 @@ instructions
 
 * clicking the close button or clicking anywhere outside the modal will make it disappear.
 
-## Testing
+# Testing
 
 * I have tested that the page works in Google Chrome browser and Safari browser.
 * I have confirmed that site is responsive, easy to read, looks decent and works well on standard screensizes using the devtools device in the browser tab.
@@ -93,4 +93,43 @@ instructions
 * Jigsaw validator
     * no errors were returned after using the W3C CSS Jigsaw validator.
 
-## Accessibility
+# Accessibility
+
+* The lighthouse extension returned an overall satisfactoy score.
+
+![Screenshot of the main game area](docs/lighthouse-score.png)
+
+# Deployment 
+
+The website was deployed to GitHub pages, with the followings steps
+
+1. Sign in to GitHub account 
+2. in the GitHub repository of the project, navigate to settings tab with the gear icon
+3. From the menu located on the left-hand side, select the Pages option
+4. Under the branch drop-down menu, select main, then press save
+5. Once saved, the page provided the link to the completed and live website.
+
+The live link can be found here: [Rock, Paper, Scissors, Lizard, Spock](https://gaborficsor.github.io/rock-paper-scissor-lizard-spock-game/)
+
+# Credits
+
+* The code to make the main game function work was partially taken from [freeCodeCamp's tutorial video on YouTube](https://www.youtube.com/watch?v=jaVNP3nIAv0)
+    * game function
+    * main function
+    * function to make random number
+    * win tie and lose functions
+
+* To make the modals that appear on screen the code was partially taken from [W3S' how to make a modal tutorial](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+* The code to make the icon appear based on the computer's choice was achieved with the help of a member of Code Institute's tutor team
+
+* The game design was inspired by Code Institute's Love Math Project.
+
+# Media
+* icons were taken from [font awesome](https://fontawesome.com/)
+* instructions image was taken from [Google Images > BigBang Theory Fandom ](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
+
+# Purpose
+
+* this website was made for education purposes only
+* this website was made by Gabor Ficsor, student at Code Institute

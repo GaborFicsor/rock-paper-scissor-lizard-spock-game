@@ -37,7 +37,7 @@ The landing page features a header with the name of the game. This has no other 
 
 ## Shapes area
 
-![Screenshot of the main game area](docs/shapes-area.png)
+![Screenshot of the shapes area](docs/shapes-area.png)
 
 * In this part of the game the user can find the options the game offers them to choose from. 
 * They can find the shapes that are mentioned in the name of the game respectively, Rock, Paper, Scissors, Lizard and Spock.
@@ -46,20 +46,20 @@ The landing page features a header with the name of the game. This has no other 
 
 ## Scoreboard
 
-![Screenshot of the main game area](docs/scoreboard.png)
+![Screenshot of the scoreboard](docs/scoreboard.png)
 
 * In this small section of the game the scoreboard can be found which is increasing every time the user or the computer wins one round. If the result is draw, none of the scores are incremented. 
 * The winner is determined after reaching 10 points.
 When the winner is announced, a modal appears on-screen that tells the user wether he has won or lost.
 
-![Screenshot of the main game area](docs/game-over-win.png)
-![Screenshot of the main game area](docs/game-over-lose.png)
+![Screenshot of the game over modal](docs/game-over-win.png)
+![Screenshot of the game over modal](docs/game-over-lose.png)
 
 * Here the user is offered to play again, where both the computer and the user start from 0 points, and the game over modal disappears.
 
 ## Buttons
 
-![Screenshot of the main game area](docs/buttons.png)
+![Screenshot of the buttons](docs/buttons.png)
 
 ### new game
 
@@ -69,7 +69,7 @@ When the winner is announced, a modal appears on-screen that tells the user weth
 
 * This button makes a modal appear on the screen which tells the user the rules of the game.
 
-![Screenshot of the main game area](docs/instructions.png)
+![Screenshot of the instructions modal](docs/instructions.png)
 
 * clicking the close button or clicking anywhere outside the modal will make it disappear.
 
@@ -97,7 +97,7 @@ When the winner is announced, a modal appears on-screen that tells the user weth
 
 * The lighthouse extension returned an overall satisfactoy score.
 
-![Screenshot of the main game area](docs/lighthouse-score.png)
+![Screenshot of the lighthouse score](docs/lighthouse-score.png)
 
 # Deployment 
 
